@@ -1,10 +1,10 @@
 const Questions = [{
         id: 0,
-        q: "What is capital of India?",
-        a: [{ text: "gandhinagar", isCorrect: false },
-            { text: "Surat", isCorrect: false },
-            { text: "Delhi", isCorrect: true },
-            { text: "mumbai", isCorrect: false }
+        q: "Which of the following keywords is used to define a variable in Javascript?",
+        a: [{ text: "var", isCorrect: false },
+            { text: "let", isCorrect: false },
+            { text: "Both A and B", isCorrect: true },
+            { text: "None of the above", isCorrect: false }
         ]
 
     },

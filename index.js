@@ -10,23 +10,14 @@ const Questions = [{
     },
     {
         id: 1,
-        q: "What is the capital of Thailand?",
-        a: [{ text: "Lampang", isCorrect: false, isSelected: false },
-            { text: "phuket", isCorrect: false },
-            { text: "Ayutthaya", isCorrect: false },
-            { text: "Bangkok", isCorrect: true }
+        q: "Which of the following methods can be used to display data in some form using Javascript?",
+        a: [{ text: "document.Write()", isCorrect: false, isSelected: false },
+            { text: "window.alert()", isCorrect: false },
+            { text: "All of the above", isCorrect: false },
+            { text: "console.log()", isCorrect: true }
         ]
 
     },
-    {
-        id: 2,
-        q: "What is the capital of Gujarat",
-        a: [{ text: "surat", isCorrect: false },
-            { text: "vadodara", isCorrect: false },
-            { text: "gandhinagar", isCorrect: true },
-            { text: "rajkot", isCorrect: false }
-        ]
-
-    }
+    
 
 ]

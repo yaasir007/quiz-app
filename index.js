@@ -6,7 +6,6 @@ const Questions = [{
             { text: "Both A and B", isCorrect: true },
             { text: "None of the above", isCorrect: false }
         ]
-
     },
     {
         id: 1,
@@ -16,7 +15,6 @@ const Questions = [{
             { text: "All of the above", isCorrect: false },
             { text: "console.log()", isCorrect: true }
         ]
-
     },
     {
         id: 2,
@@ -28,5 +26,6 @@ const Questions = [{
         ]
 
     }
+];
 
-]
+

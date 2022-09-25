@@ -26,6 +26,15 @@ const Questions = [{
             { text: "in", isCorrect: true },
             { text: "lies", isCorrect: false }
         ]
+    },
+    {
+        id: 3,
+        q: "What is what is used to check whether a given property is valid or not?",
+        a: [{ text: "exists", isCorrect: false },
+            { text: "is in", isCorrect: false },
+            { text: "in", isCorrect: true },
+            { text: "lies", isCorrect: false }
+        ]
 
     }
 

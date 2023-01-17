@@ -35,7 +35,6 @@ const Questions = [{
             { text: "in", isCorrect: true },
             { text: "lies", isCorrect: false }
         ]
-
     }
 
 ]

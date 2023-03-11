@@ -37,6 +37,15 @@ const questions = [{
         ]
     }
 ]
-
-const currentQuestion = document.querySelector(".question");
+const submitBtn = document.querySelector(".btn");
+const currentQuestionElement = document.querySelector(".question");
 const answers = document.querySelector(".answers");
+let currentQuestion = 0;
+
+submitBtn.addEventListener("click", () => {
+  currentQuestion++;
+  if (currentQuestionElement != undefined) {
+    currentQuestionElement.innerHTML = questions[currentQuestion].q;
+  }
+  const options = questions[currentQuestion].a;
+});

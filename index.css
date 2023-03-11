@@ -40,14 +40,6 @@ body {
   margin-right: 1rem;
 }
 
-.guide {
-  position: absolute;
-  top: 8.5rem;
-  left: 2.6rem;
-  font-size: 1.2rem;
-  opacity: .5;
-}
-
 .answers {
   position: absolute;
   top: 13rem;
@@ -71,6 +63,14 @@ body {
   background-color: #43b029;
   color: white;
   cursor: pointer;
+}
+
+.answer:hover {
+  background-color: #25a007;
+}
+
+.correctAnswer {
+  background-color: cornflowerblue;
 }
 
 .none {

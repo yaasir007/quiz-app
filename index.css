@@ -70,6 +70,7 @@ body {
   font-size: 1.2rem;
   background-color: #43b029;
   color: white;
+  cursor: pointer;
 }
 
 .none {
@@ -110,5 +111,6 @@ button {
 
 button:active,
 button:hover {
-  background-color: #43b029;
+  background-color: white;
+  color: black;
 }

@@ -1,4 +1,4 @@
-const Questions = [{
+const questions = [{
         id: 0,
         q: "Which of the following keywords is used to define a variable in Javascript?",
         a: [{ text: "var", isCorrect: false },
@@ -38,4 +38,5 @@ const Questions = [{
     }
 ]
 
-
+const currentQuestion = document.querySelector(".question");
+const answers = document.querySelector(".answers");

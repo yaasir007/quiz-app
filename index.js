@@ -41,11 +41,24 @@ const submitBtn = document.querySelector(".btn");
 const currentQuestionElement = document.querySelector(".question");
 const answers = document.querySelector(".answers");
 let currentQuestion = 0;
+let currentOption = 0;
+
 
 submitBtn.addEventListener("click", () => {
   currentQuestion++;
+  currentOption++;
+
+  answers.innerHTML = ``;
+  
   if (currentQuestionElement != undefined) {
     currentQuestionElement.innerHTML = questions[currentQuestion].q;
   }
-  const options = questions[currentQuestion].a;
+
+
+  questions.forEach((element) => {
+    const answer = document.createElement('div');
+    answer.classList.add('answer');
+    answer.innerHTML = element.a[currentOption].text;
+    answers.append(answer);
+  });
 });

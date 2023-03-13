@@ -10,7 +10,7 @@ const questions = [{
     },
     {
         id: 1,
-        q: "Which of the following methods can be used to display data in some form using Javascript?",
+        q: "Which method can be used to display data in some form using Javascript?",
         a: [{ text: "document.Write()", isCorrect: false, isSelected: false },
             { text: "window.alert()", isCorrect: false },
             { text: "All of the above", isCorrect: false },
@@ -49,16 +49,18 @@ submitBtn.addEventListener("click", () => {
   currentOption++;
 
   answers.innerHTML = ``;
-  
+
   if (currentQuestionElement != undefined) {
     currentQuestionElement.innerHTML = questions[currentQuestion].q;
   }
 
-
   questions.forEach((element) => {
     const answer = document.createElement('div');
     answer.classList.add('answer');
-    answer.innerHTML = element.a[currentOption].text;
+
+    for (let index = 0; index < (questions[currentQuestion].a).length; index++) {
+      answer.innerHTML = (questions[currentQuestion].a).text;
+    }
     answers.append(answer);
   });
 });

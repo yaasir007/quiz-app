@@ -48,11 +48,12 @@ submitBtn.addEventListener("click", () => {
   currentQuestion++;
   currentOption++;
 
-  answers.innerHTML = ``;
+  answers.innerHTML = `HEllo`;
 
   if (currentQuestionElement != undefined) {
     currentQuestionElement.innerHTML = questions[currentQuestion].q;
   }
+
 
   questions.forEach((element) => {
     const answer = document.createElement('div');
@@ -61,6 +62,7 @@ submitBtn.addEventListener("click", () => {
     for (let index = 0; index < (questions[currentQuestion].a).length; index++) {
       answer.innerHTML = (questions[currentQuestion].a).text;
     }
+
     answers.append(answer);
   });
 });

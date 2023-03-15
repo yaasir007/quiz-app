@@ -37,3 +37,11 @@ const questions = [{
         ]
     }
 ];
+
+const questionElement = document.querySelector(".question");
+const option1 = document.querySelector(".opt1");
+const option2 = document.querySelector(".opt2");
+const option3 = document.querySelector(".opt3");
+const option4 = document.querySelector(".opt4");
+const option5 = document.querySelector(".opt5");
+const submitBtn = document.querySelector(".btn");

@@ -36,33 +36,4 @@ const questions = [{
             { text: "lies", isCorrect: false }
         ]
     }
-]
-const submitBtn = document.querySelector(".btn");
-const currentQuestionElement = document.querySelector(".question");
-const answers = document.querySelector(".answers");
-let currentQuestion = 0;
-let currentOption = 0;
-
-
-submitBtn.addEventListener("click", () => {
-  currentQuestion++;
-  currentOption++;
-
-  answers.innerHTML = `HEllo`;
-
-  if (currentQuestionElement != undefined) {
-    currentQuestionElement.innerHTML = questions[currentQuestion].q;
-  }
-
-
-  questions.forEach((element) => {
-    const answer = document.createElement('div');
-    answer.classList.add('answer');
-
-    for (let index = 0; index < (questions[currentQuestion].a).length; index++) {
-      answer.innerHTML = (questions[currentQuestion].a).text;
-    }
-
-    answers.append(answer);
-  });
-});
+];

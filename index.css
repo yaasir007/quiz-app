@@ -74,16 +74,8 @@ body {
 }
 
 .none {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 320px;
-  padding: 1.2rem;
-  border-radius: 15px;
-  font-size: 1.2rem;
-  background-color: #43b029;
-  color: white;
-  background-color: lightgray;
+  display: none;
+  text-align: center;
 }
 
 .btn {
@@ -94,11 +86,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-button {
-  all: unset;
-  width: 100%;
   text-align: center;
   padding: 1.1rem;
   background-color: #19202e;
@@ -109,8 +97,29 @@ button {
   transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-button:active,
-button:hover {
+.evaluate {
+  width: 320px;
+  position: absolute;
+  top: 38rem;
+  left: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 1.1rem;
+  background-color: #1d976a;
+  color: white;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn:active,
+.evaluate:active,
+.btn:hover,
+.evaluate:hover {
   background-color: rgb(56, 86, 88);
   color: white;
 }

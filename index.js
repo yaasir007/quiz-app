@@ -50,8 +50,9 @@ const opt1Element = document.querySelector(".opt1");
 const opt2Element = document.querySelector(".opt2");
 const opt3Element = document.querySelector(".opt3");
 const opt4Element = document.querySelector(".opt4");
+const opt5Element = document.querySelector(".none");
 const btnElment = document.querySelector(".btn");
-let counter = 0;
+const evaluateElement = document.querySelector(".evaluate");
 
 const iterate = (id) => {
   //setting the question and answer options
@@ -74,20 +75,21 @@ const iterate = (id) => {
     opt4Element.style.border = "solid 1px #e9e2d5";
   };
 
+  //hiding the result initally
+  opt5Element.style.display = "none";
   defaultOptionBgColor(opt1Element);
   defaultOptionBgColor(opt2Element);
   defaultOptionBgColor(opt3Element);
   defaultOptionBgColor(opt4Element);
 
+  let selected = 0;
 
-  let selected = "";
   opt1Element.addEventListener("click", () => {
     opt1Element.style.backgroundColor = "black";
     defaultOptionBgColor(opt2Element);
     defaultOptionBgColor(opt3Element);
     defaultOptionBgColor(opt4Element);
     selected = opt1Element.value;
-    console.log(selected);
   });
 
   opt2Element.addEventListener("click", () => {
@@ -96,7 +98,6 @@ const iterate = (id) => {
     defaultOptionBgColor(opt3Element);
     defaultOptionBgColor(opt4Element);
     selected = opt2Element.value;
-    console.log(selected);
   });
 
   opt3Element.addEventListener("click", () => {
@@ -105,7 +106,6 @@ const iterate = (id) => {
     opt3Element.style.backgroundColor = "black";
     defaultOptionBgColor(opt4Element);
     selected = opt3Element.value;
-    console.log(selected);
   });
 
   opt4Element.addEventListener("click", () => {
@@ -114,8 +114,21 @@ const iterate = (id) => {
     defaultOptionBgColor(opt3Element);
     opt4Element.style.backgroundColor = "black";
     selected = opt4Element.value;
-    console.log(selected);
   });
+
+  evaluateElement.addEventListener('click', () => {
+    if (selected == true) {
+      opt5Element.style.display = "block";
+      opt5Element.innerText = "Correct";
+      defaultOptionBgColor(opt5Element);
+      btnElment.style.display = "block";
+    } else {
+      opt5Element.style.display = "block";
+      opt5Element.style.backgroundColor = "red";
+      opt5Element.innerText = "Incorrect";
+      btnElment.style.display = "none";
+    }
+  })
 };
 
 let start = true;
@@ -126,7 +139,7 @@ if (start) {
 const result = () => {
   const finishedBox = document.createElement('div');
   finishedBox.classList.add("result");
-  finishedBox.innerHTML = `<p>This Quiz is <br>Finished!!!</p>${counter}`;
+  finishedBox.innerHTML = `<p>This Quiz is <br>Finished!!!</p>`;
   quizContainer.append(finishedBox);
 }
 

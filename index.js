@@ -66,43 +66,56 @@ const iterate = (id) => {
   opt3Element.value = questions[id].a[2].isCorrect;
   opt4Element.value = questions[id].a[3].isCorrect;
 
+  const defaultOptionBgColor = (htmlElement) => {
+    htmlElement.style.backgroundColor = "#43b029";
+  }
+
+  const selectedOptionBgColor = (option) => {
+    opt4Element.style.border = "solid 1px #e9e2d5";
+  };
+
+  defaultOptionBgColor(opt1Element);
+  defaultOptionBgColor(opt2Element);
+  defaultOptionBgColor(opt3Element);
+  defaultOptionBgColor(opt4Element);
+
+
   let selected = "";
   opt1Element.addEventListener("click", () => {
     opt1Element.style.backgroundColor = "black";
-    opt2Element.style.backgroundColor = "#43b029";
-    opt3Element.style.backgroundColor = "#43b029";
-    opt4Element.style.backgroundColor = "#43b029";
+    defaultOptionBgColor(opt2Element);
+    defaultOptionBgColor(opt3Element);
+    defaultOptionBgColor(opt4Element);
     selected = opt1Element.value;
     console.log(selected);
   });
 
   opt2Element.addEventListener("click", () => {
-    opt1Element.style.backgroundColor = "#43b029";
+    defaultOptionBgColor(opt1Element);
     opt2Element.style.backgroundColor = "black";
-    opt3Element.style.backgroundColor = "#43b029";
-    opt4Element.style.backgroundColor = "#43b029";
+    defaultOptionBgColor(opt3Element);
+    defaultOptionBgColor(opt4Element);
     selected = opt2Element.value;
     console.log(selected);
   });
 
   opt3Element.addEventListener("click", () => {
-    opt1Element.style.backgroundColor = "#43b029";
-    opt2Element.style.backgroundColor = "#43b029";
+    defaultOptionBgColor(opt1Element);
+    defaultOptionBgColor(opt2Element);
     opt3Element.style.backgroundColor = "black";
-    opt4Element.style.backgroundColor = "#43b029";
+    defaultOptionBgColor(opt4Element);
     selected = opt3Element.value;
     console.log(selected);
   });
 
   opt4Element.addEventListener("click", () => {
-    opt1Element.style.backgroundColor = "#43b029";
-    opt2Element.style.backgroundColor = "#43b029";
-    opt3Element.style.backgroundColor = "#43b029";
+    defaultOptionBgColor(opt1Element);
+    defaultOptionBgColor(opt2Element);
+    defaultOptionBgColor(opt3Element);
     opt4Element.style.backgroundColor = "black";
     selected = opt4Element.value;
     console.log(selected);
   });
-
 };
 
 let start = true;

@@ -69,9 +69,9 @@ const iteration = (id) => {
 
 }
 
-// if (start) {
-//   iteration(0);
-// }
+if (start) {
+  iteration(0);
+}
 
 // // Next button and method
 // const next = document.querySelector(".btn");

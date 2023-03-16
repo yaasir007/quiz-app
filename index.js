@@ -61,11 +61,11 @@ const iteration = (id) => {
   option4.innerText = questions[id].a[3].text;
 
 
-  // //setting the value for the options
-  // option1.value = questions[id].a[0].isCorrect;
-  // option2.value = questions[id].a[1].isCorrect;
-  // option3.value = questions[id].a[2].isCorrect;
-  // option4.value = questions[id].a[3].isCorrect;
+  //setting the value for the options
+  option1.value = questions[id].a[0].isCorrect;
+  option2.value = questions[id].a[1].isCorrect;
+  option3.value = questions[id].a[2].isCorrect;
+  option4.value = questions[id].a[3].isCorrect;
 
 }
 

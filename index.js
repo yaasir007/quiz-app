@@ -51,6 +51,7 @@ const opt2Element = document.querySelector(".opt2");
 const opt3Element = document.querySelector(".opt3");
 const opt4Element = document.querySelector(".opt4");
 const btnElment = document.querySelector(".btn");
+let counter = 0;
 
 const iterate = (id) => {
   //setting the question and answer options
@@ -60,12 +61,48 @@ const iterate = (id) => {
   opt3Element.innerText = questions[id].a[2].text;
   opt4Element.innerText = questions[id].a[3].text;
 
-
-  //adding value to elements
   opt1Element.value = questions[id].a[0].isCorrect;
   opt2Element.value = questions[id].a[1].isCorrect;
   opt3Element.value = questions[id].a[2].isCorrect;
   opt4Element.value = questions[id].a[3].isCorrect;
+
+  let selected = "";
+  opt1Element.addEventListener("click", () => {
+    opt1Element.style.backgroundColor = "black";
+    opt2Element.style.backgroundColor = "#43b029";
+    opt3Element.style.backgroundColor = "#43b029";
+    opt4Element.style.backgroundColor = "#43b029";
+    selected = opt1Element.value;
+    console.log(selected);
+  });
+
+  opt2Element.addEventListener("click", () => {
+    opt1Element.style.backgroundColor = "#43b029";
+    opt2Element.style.backgroundColor = "black";
+    opt3Element.style.backgroundColor = "#43b029";
+    opt4Element.style.backgroundColor = "#43b029";
+    selected = opt2Element.value;
+    console.log(selected);
+  });
+
+  opt3Element.addEventListener("click", () => {
+    opt1Element.style.backgroundColor = "#43b029";
+    opt2Element.style.backgroundColor = "#43b029";
+    opt3Element.style.backgroundColor = "black";
+    opt4Element.style.backgroundColor = "#43b029";
+    selected = opt3Element.value;
+    console.log(selected);
+  });
+
+  opt4Element.addEventListener("click", () => {
+    opt1Element.style.backgroundColor = "#43b029";
+    opt2Element.style.backgroundColor = "#43b029";
+    opt3Element.style.backgroundColor = "#43b029";
+    opt4Element.style.backgroundColor = "black";
+    selected = opt4Element.value;
+    console.log(selected);
+  });
+
 };
 
 let start = true;
@@ -76,7 +113,7 @@ if (start) {
 const result = () => {
   const finishedBox = document.createElement('div');
   finishedBox.classList.add("result");
-  finishedBox.innerHTML = `<p>This Quiz is <br>Finished!!!</p>`;
+  finishedBox.innerHTML = `<p>This Quiz is <br>Finished!!!</p>${counter}`;
   quizContainer.append(finishedBox);
 }
 

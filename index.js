@@ -51,8 +51,8 @@ const iteration = (id) => {
   const option4 = document.querySelector(".opt4");
   const option5 = document.querySelector(".opt5");
 
-  // //setting the question
-  // questionElement.innerText = questions[id].q;
+  //setting the question
+  questionElement.innerText = questions[id].q;
 
   // //setting the text for the option
   // option1.innerText = questions[id].a[0].text;

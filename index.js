@@ -54,11 +54,11 @@ const iteration = (id) => {
   //setting the question
   questionElement.innerText = questions[id].q;
 
-  // //setting the text for the option
-  // option1.innerText = questions[id].a[0].text;
-  // option2.innerText = questions[id].a[1].text;
-  // option3.innerText = questions[id].a[2].text;
-  // option4.innerText = questions[id].a[3].text;
+  //setting the text for the option
+  option1.innerText = questions[id].a[0].text;
+  option2.innerText = questions[id].a[1].text;
+  option3.innerText = questions[id].a[2].text;
+  option4.innerText = questions[id].a[3].text;
 
 
   // //setting the value for the options

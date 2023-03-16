@@ -41,53 +41,53 @@ const questions = [
   },
 ];
 
-// Set start
-// var start = true;
+//getting the elements
+const quizWrapper = document.querySelector(".quiz-wrapper");
+const quizContainer = document.querySelector(".quiz-container");
 
-// const iteration = (id) => {
-
-//   //getting the elements
-//   const questionElement = document.querySelector(".question");
-//   const option1 = document.querySelector(".opt1");
-//   const option2 = document.querySelector(".opt2");
-//   const option3 = document.querySelector(".opt3");
-//   const option4 = document.querySelector(".opt4");
-
-//   //setting the question
-//   questionElement.innerText = questions[id].q;
-
-//   //setting the text for the option
-//   option1.innerText = questions[id].a[0].text;
-//   option2.innerText = questions[id].a[1].text;
-//   option3.innerText = questions[id].a[2].text;
-//   option4.innerText = questions[id].a[3].text;
-
-
-//   //setting the value for the options
-//   option1.value = questions[id].a[0].isCorrect;
-//   option2.value = questions[id].a[1].isCorrect;
-//   option3.value = questions[id].a[2].isCorrect;
-//   option4.value = questions[id].a[3].isCorrect;
-
-// }
-
-// //starting line
-// if (start) {
-//   iteration(0);
-// }
-
-// // Next button and method
-// const next = document.querySelector(".btn");
-// var id = 0;
-
-// next.addEventListener("click", () => {
-//     if (id < 3) {
-//         id++;
-//         iteration(id);
-//         console.log(id);
-//     }
-// })
+const questionElement = document.querySelector('.question');
+const opt1Element = document.querySelector(".opt1");
+const opt2Element = document.querySelector(".opt2");
+const opt3Element = document.querySelector(".opt3");
+const opt4Element = document.querySelector(".opt4");
+const btnElment = document.querySelector(".btn");
 
 const iterate = (id) => {
+  //setting the question and answer options
+  questionElement.innerText = questions[id].q;
+  opt1Element.innerText = questions[id].a[0].text;
+  opt2Element.innerText = questions[id].a[1].text;
+  opt3Element.innerText = questions[id].a[2].text;
+  opt4Element.innerText = questions[id].a[3].text;
 
+
+  //adding value to elements
+  opt1Element.value = questions[id].a[0].isCorrect;
+  opt2Element.value = questions[id].a[1].isCorrect;
+  opt3Element.value = questions[id].a[2].isCorrect;
+  opt4Element.value = questions[id].a[3].isCorrect;
+};
+
+let start = true;
+if (start) {
+  iterate(0);
 }
+
+const result = () => {
+  const finishedBox = document.createElement('div');
+  finishedBox.classList.add("result");
+  finishedBox.innerHTML = `<p>This Quiz is <br>Finished!!!</p>`;
+  quizContainer.append(finishedBox);
+}
+
+id = 0;
+btnElment.addEventListener('click', () => {
+  if (id < 3) {
+    start = false;
+    id++;
+    iterate(id);
+  } else {
+    quizWrapper.style.display = 'none';
+    result();
+  }
+})

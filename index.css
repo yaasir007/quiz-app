@@ -111,6 +111,12 @@ button {
 
 button:active,
 button:hover {
-  background-color: white;
-  color: black;
+  background-color: rgb(56, 86, 88);
+  color: white;
+}
+
+.result {
+  font-size: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: oblique;
 }
